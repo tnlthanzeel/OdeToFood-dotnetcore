@@ -1,0 +1,16 @@
+﻿@page "{restaurantId:int}"
+@*@page "{id?:int}" is also possible, we can put constrains to the parameter as well, eg: {id:int}*@
+
+
+@model OdeToFood.Pages.Restuarants.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>Detail</h2>
+<div>Id: @Model.Restaurants.Id</div>
+<div>Name: @Model.Restaurants.Name</div>
+<div>Location: @Model.Restaurants.Location</div>
+<div>Cuisine: @Model.Restaurants.Cuisine</div>
+
+<a asp-page="./List">All Resturants</a>
