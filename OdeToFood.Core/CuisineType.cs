@@ -4,6 +4,8 @@
     {
         None,
         SriLankan,
-        Indian
+        Indian,
+        Italian,
+        Mexican
     }
 }
