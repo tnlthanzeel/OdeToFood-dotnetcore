@@ -58,6 +58,11 @@ namespace OdeToFood.Data
                     select r).FirstOrDefault();
         }
 
+        public int GetCountOfRestaurats()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Restaurants Update(Restaurants resturant)
         {
             var restaurant = (from r in restaurants

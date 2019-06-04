@@ -48,6 +48,11 @@ namespace OdeToFood.Data
             return odeToFoodDbContext.Restaurants.Find(resturantId);
         }
 
+        public int GetCountOfRestaurats()
+        {
+            return odeToFoodDbContext.Restaurants.Count();
+        }
+
         public Restaurants Update(Restaurants resturant)
         {
             var restaurant = odeToFoodDbContext.Restaurants.Attach(resturant);
