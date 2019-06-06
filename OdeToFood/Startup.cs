@@ -31,8 +31,11 @@ namespace OdeToFood
             {
                 options.UseSqlServer(Configuration.GetConnectionString("OdeToFoodDb"));
             });
-            // only for testing (seed data)
             services.AddScoped<IRestaurantData, SQLRestaurantData>();
+
+            // only for testing (seed data)
+            //services.AddScoped<IRestaurantData, InMemoryRestaurantsData>();
+
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -61,6 +64,7 @@ namespace OdeToFood
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseNodeModules(env);
             app.UseCookiePolicy();
 
             app.UseMvc();
